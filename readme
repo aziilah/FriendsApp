@@ -1,0 +1,8 @@
+Model: Database
+View: webpages 
+Controller: 
+assets: css, js, img
+
+generator: generate all kin of thing
+
+Application Partial Link and New pages
