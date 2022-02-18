@@ -73,3 +73,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "javascript", "~> 0.1.0"
+gem "esbuild", "~> 0.2.1"
+
+gem "tailwindcss-rails", "~> 2.0"
