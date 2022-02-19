@@ -30,6 +30,9 @@ gem "jbuilder"
 # from rubygems.org, for user management
 gem "devise", "~> 4.8", ">= 4.8.1"
 
+gem "cssbundling-rails"
+
+gem "jsbundling-rails"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -74,7 +77,4 @@ group :test do
   gem "webdrivers"
 end
 
-gem "javascript", "~> 0.1.0"
-gem "esbuild", "~> 0.2.1"
-
-gem "tailwindcss-rails", "~> 2.0"
+gem "tailwindcss", "~> 0.1.1"

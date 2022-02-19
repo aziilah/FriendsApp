@@ -69,6 +69,6 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   
   # For development environment
-  config.action_mailer.default_url_options = { host: '127.0.0.1', port: 3000 }
+  config.action_mailer.default_url_options = { host: '127.0.0.1', port: 5000 }
 
 end
