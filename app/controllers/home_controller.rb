@@ -7,4 +7,5 @@ class HomeController < ApplicationController
   def about
     @about_app = "About this Application"
   end
+  
 end

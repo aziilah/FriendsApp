@@ -1,34 +1,31 @@
-<div class="card col-md-4 mb-2">
-  <div class="card-header">
-    <h4 class="mb-2">Log in</h4>
-  </div>
-  <div class="card-body">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<div class="col-md-8 ">
-  <div class="field mb-3">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="bg-gray-900 rounded shadow overflow-hidden max-w-3xl p-10 col-md-4 row justify-content-center mx-auto mt-8">
 
-  <div class="field mb-2">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field mb-3">
-      <%= f.check_box :remember_me%>
-      <%= f.label :remember_me %>
+  <div class="text-white">
+      <div class="px-6 py-6">
+        <h1 class="text-center font-bold text-3xl mb-4">Welcome Back!</h1>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %> 
+        <div class="mx-auto mt-6 w-24 border-b-2"></div>
+        <div class= "mt-4 mb-4">
+          <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true, autocomplete: "email"%> 
+        </div>
+        <div class= "mt-4 mb-6">
+          <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "current-password" %> 
+        </div>
+        
+        <div class="flex justify-between items-center">
+          <% if devise_mapping.rememberable? %>
+            <div>
+              <%= f.check_box :remember_me, type: "checkbox", id: "remember"%> 
+              <%= f.label :remember_me %> 
+            </div>
+          <% end %>
+         
+            <div class="mb-1">
+              <button <%= f.submit "Sign In", class: "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-md font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>Sign In</button>
+            </div>
+        </div>
+      <%end%>
     </div>
-  <% end %>
-
-  <div class="actions mb-3">
-    <%= f.submit "Log in", class: 'btn btn-info' %>
-  </div>
-<% end %>
+  </div>    
 </div>
-  </div>
-</div>
-
-
-<%= render "devise/shared/links" %>
+ 

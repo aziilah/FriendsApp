@@ -7,20 +7,28 @@ class FriendsController < ApplicationController
   # GET /friends or /friends.json
   def index
     @friends = Friend.all
+    
   end
 
   # GET /friends/1 or /friends/1.json
   def show
+    
+      @show_friend = "Friend Informations"
+    
   end
 
   # GET /friends/new
   def new
     #@friend = Friend.new
+    @friend_index = "Add New Friend"
+    @friend_title = "Create"
     @friend = current_user.friends.build
   end
 
   # GET /friends/1/edit
   def edit
+    @friend_index = "Edit Friend"
+    @friend_title = "Edit"
   end
 
   # POST /friends or /friends.json

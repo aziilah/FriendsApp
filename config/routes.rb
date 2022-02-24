@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # get 'home/index'
   get 'home/about'
   #root 'home#index'
-  root 'friends#index'
+  root 'home#index'
   
   devise_scope :user do
     get 'users/sign_up' => "registrations#new"

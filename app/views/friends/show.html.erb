@@ -1,28 +1,40 @@
-<div class="row align-items-md-stretch">
-      <div class="col-md-6">
-        <div class="h-100 p-5 pb-4 text-white bg-dark rounded-3">
-          <h1>
-          <%= @friend.first_name %>
-          <%= @friend.last_name %>
-          </h1>
 
-          <div class="mb-5">
-            <div>
-              <%= @friend.email %>
-            </div>
-            <div>
-              <%= @friend.phone %>
-            </div>
-            <div>
-              <%= @friend.twitter %>
-            </div>
-         </div>
+<h2 class="mb-4 text-2xl font-black"><%= @show_friend %></h2>
 
-          <div>
-            <%= link_to "Edit", edit_friend_path(@friend), class: "btn btn-primary" %> 
-            <%= link_to "Back", friends_path, class: "btn btn-secondary" %>   
-            <%= button_to "Delete this friend", @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm mt-1" %>
-          </div>
-        </div>
-      </div>
+<div class="max-w-lg mx-auto mt-16 text-center max-w-sm rounded overflow-hidden shadow-lg h-100 p-5 pb-4 mb-4 text-white bg-gradient-to-br from-purple-600 rounded-lg">
+  <h1 class = "mb-2">
+    <%= @friend.first_name %>
+    <%= @friend.last_name %>
+  </h1>
+
+  <div>
+    <div class = "mb-2">
+      <%= @friend.email %>
+    </div>
+    <div class = "mb-2">
+      <%= @friend.phone %>
+    </div>
+    <div class = "mb-5">
+      <%= "@" + '' +@friend.twitter %>
+    </div>
+    <div>
+      <%= link_to "Edit", edit_friend_path(@friend), class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %> 
+      <%= link_to "Delete this friend", @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-white bg-red-700 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:focus:ring-red-900" %>
+    </div>
+  </div>
 </div>
+
+<div class = "flex justify-start items-center">
+  <%= link_to "Back", friends_path, class: "justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-dark bg-slate-600 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+</div>
+
+  
+
+
+
+
+
+
+          
+
+        
