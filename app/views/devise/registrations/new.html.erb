@@ -10,10 +10,10 @@
         </div>
 
         <div class= "mb-4">
-            <% if @minimum_password_length %>
-            <em><% @minimum_password_length %></em>
-            <% end %><br />
-            <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password (minimum 6 characters)" %>
+          <% if @minimum_password_length %>
+          <em><% @minimum_password_length %></em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password (minimum 6 characters)" %>
         </div>
 
         <div class= "mb-4">
@@ -24,7 +24,7 @@
             <button <%= f.submit "Sign Up", class: "py-2 px-4 border border-transparent shadow-sm text-md font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>Sign Up</button>
         </div>
         <%end%>
-    </div>
+      </div>
     </div>
   </div>    
 </div>
